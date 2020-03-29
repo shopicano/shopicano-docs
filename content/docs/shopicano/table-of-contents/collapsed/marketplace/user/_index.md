@@ -1,3 +1,8 @@
+---
+title: '# User'
+weight: 2
+---
+
 # User API
 
 ## > Search/List Users

@@ -1,3 +1,8 @@
+---
+title: '# Payment Method'
+weight: 3
+---
+
 # Payment Method API
 
 ## > Create

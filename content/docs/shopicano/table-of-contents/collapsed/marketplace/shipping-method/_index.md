@@ -1,3 +1,8 @@
+---
+title: '# Shipping Method'
+weight: 4
+---
+
 # Shipping Method API
 
 ## > Create
