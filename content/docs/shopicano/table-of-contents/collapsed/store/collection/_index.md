@@ -156,7 +156,7 @@ Response `204`
 
 ```
 
-## Add Products
+## > Add Products
 ```bash
 PATCH {{host}}/marketplace/collections/{{collection_id}}/products
 ```
@@ -181,9 +181,9 @@ Response `200`
 
 ```
 
-## Remove Products
+## > Remove Products
 ```bash
-Remove {{host}}/marketplace/collections/{{collection_id}}/products
+DELETE {{host}}/marketplace/collections/{{collection_id}}/products
 ```
 
 Headers
