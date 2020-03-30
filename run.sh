@@ -1,3 +1,3 @@
 #!/bin/bash
 
-hugo server --theme book
+hugo server --bind 0.0.0.0 --theme book
