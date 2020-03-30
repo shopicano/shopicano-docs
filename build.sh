@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t shopicano/docs:"$2" .
+docker build -t shopicano/docs:"$1" .
