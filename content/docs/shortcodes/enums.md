@@ -1,13 +1,69 @@
-# Buttons
-
-Buttons are styled links that can lead to local page or external link.
-
-## Example
-
-```tpl
-{{</* button relref="/" [class="..."] */>}}Get Home{{</* /button */>}}
-{{</* button href="https://github.com/alex-shpak/hugo-book" */>}}Contribute{{</* /button */>}}
+### Platform Status
+```text
+active
+maintenance
 ```
 
-{{< button relref="/" >}}Get Home{{< /button >}}
-{{< button href="https://github.com/alex-shpak/hugo-book" >}}Contribute{{< /button >}}
+### Store Status
+```text
+registered
+active
+suspended
+banned
+```
+
+### Store Permission
+```text
+admin
+manager
+user
+```
+
+### User Status
+```text
+registered
+active
+banned
+suspended
+```
+
+### User Permission
+```text
+admin
+manager
+user
+```
+
+### Order Status
+```text
+order_pending
+order_cancelled
+order_confirmed
+order_shipping
+order_delivered
+order_returned
+```
+
+### Payment Status
+```text
+payment_pending
+payment_completed
+payment_failed
+payment_refunded
+```
+
+### Coupon Types
+
+```text
+product_discount
+shipping_discount
+total_discount
+```
+
+### Location Types
+
+```text
+0 = Country
+1 = State
+2 = City
+```

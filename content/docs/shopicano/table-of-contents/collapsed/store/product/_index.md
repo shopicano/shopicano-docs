@@ -316,7 +316,7 @@ Response `204`
 
 ```
 
-## > Add Digital Product
+## > Upload Digital Product
 ```bash
 POST {{host}}/marketplace/products/{{product_id}}/upload
 ```
