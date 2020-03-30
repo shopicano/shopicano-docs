@@ -1,3 +1,3 @@
 #!/bin/bash
 
-hugo server --disableFastRender --minify --theme book
+hugo server --theme book
