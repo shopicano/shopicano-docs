@@ -18,11 +18,13 @@ cd shopicano-backend
 
 Then
 ```bash
-./setup.sh
+./setup.sh  # Multi-Vendor mode
+./setup-single.sh  # Single-Vendor mode
 ```
 Or
 ```bash
-./setup.sh {hostname}
+./setup.sh {hostname}  # Multi-Vendor mode
+./setup-single.sh {hostname}  # Single-Vendor mode
 ```
 
 ## Build from source code
