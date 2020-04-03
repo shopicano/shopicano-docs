@@ -37,6 +37,11 @@ Response `200`
 PUT {{host}}/users
 ```
 
+Headers
+```text
+Authorization: Bearer {{user_token}}
+```
+
 Body
 ```json
 {
