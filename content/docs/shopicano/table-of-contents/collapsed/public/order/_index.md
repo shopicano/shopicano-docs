@@ -625,3 +625,55 @@ Response `200`
 ```text
 Expected file as binary stream
 ```
+
+## > Generate Nonce
+```text
+{{host}}/orders/{{order_id}}/nonce
+```
+
+Headers
+```bash
+Content-Type: application/json
+Authorization: Bearer {{user_token}}
+```
+
+Response `200`
+```json
+{
+    "data": {
+        "url": "https://sandbox.sslcommerz.com/EasyCheckOut/testcded3741ba18ef704135e683fddaba40557"
+    }
+}
+```
+
+Instead of `url` you may get `nonce` too. It depends on payment gateway.
+
+If you get `url` the redirect the user to this url, so user can pay. After payment completion user will be redirected to `Payment Callback from Gateway` url and then to storefront. SSL Commerce, Paddle, 2Checkout follows this process.
+
+If you get `nonce` then initiate payment option with this nonce. Stripe and BrainTree follows this process.
+
+## > Add Review
+```text
+{{host}}/orders/{{order_id}}/review
+```
+
+Headers
+```bash
+Content-Type: application/json
+Authorization: Bearer {{user_token}}
+```
+
+Body
+```json
+{
+    "rating": 4,
+    "description": "The products were really good."
+}
+```
+
+Response `200`
+```json
+{
+    "title": "Payment successfully refunded"
+}
+```

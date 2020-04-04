@@ -238,9 +238,39 @@ Response `200`
 }
 ```
 
-## > Delete
+## > Download Digital Product
 ```bash
-DELETE {{host}}/marketplace/orders/{{order_id}}
+GET {{host}}/marketplace/orders/{{order_id}}/products/{{product_id}}/download
+```
+
+Query Param
+```bash
+Authorization={{store_user_token}}
+```
+
+Response `200`
+```text
+Expected file as binary stream
+```
+
+## > Payment Callback from Gateway
+```text
+{{dev}}/orders/{{order_id}}/pay
+```
+
+Query Param,
+```text
+Depends on payment gateway
+```
+
+Body,
+```text
+Depends on payment gateway
+```
+
+## Refund Payment
+```text
+POST {{host}}/marketplace/orders/{{order_id}}/refund
 ```
 
 Headers
@@ -249,22 +279,22 @@ Content-Type: application/json
 Authorization: Bearer {{store_user_token}}
 ```
 
-Response `204`
-```bash
-
+Body
+```json
+{
+    "reason": "Refund requested by customer",
+    "type": 0
+}
 ```
 
-## > Download Digital Product
-```bash
-GET {{host}}/marketplace/orders/{{order_id}}/products/{{product_id}}/download
-```
-
-Query Param
-```bash
-Authorization={{user_token}}
-```
-
-Response `200`
-```text
-Expected file as binary stream
+Response `201`
+```json
+{
+    "data": {
+        "id": "f09c0afd-02be-4320-8ab7-98b03c886908",
+        "rating": 4,
+        "description": "Okay",
+        "created_at": "2020-04-04T16:15:46.834945Z"
+    }
+}
 ```
