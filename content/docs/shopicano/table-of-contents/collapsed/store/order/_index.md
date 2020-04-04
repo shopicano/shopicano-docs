@@ -259,13 +259,12 @@ Response `204`
 GET {{host}}/marketplace/orders/{{order_id}}/products/{{product_id}}/download
 ```
 
-Headers
+Query Param
 ```bash
-Content-Type: application/json
-Authorization: Bearer {{store_user_token}}
+Authorization={{user_token}}
 ```
 
 Response `200`
-```json
-
+```text
+Expected file as binary stream
 ```

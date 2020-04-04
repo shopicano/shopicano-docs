@@ -8,8 +8,8 @@ bookToc: false
 
 Shopicano follows JWT authentication and authorization standards.
 
-When a user logs in shopicano generates JWT token which can be used later to control access of users to restricted data.
-Besides JWT Shopicano maintains storage of tokens, so if you remove the token from storage the user won't be able to access data using that token anymore. This way makes the platform more secure over JWT.
+When a user logs in, Shopicano generates JWT token which can be used later to control access of users to restricted data.
+Besides JWT, Shopicano maintains storage of tokens, so if you remove the token from storage the user won't be able to access data using that token anymore. This way makes the platform more secure over JWT.
 
 # How it Works
 
@@ -28,7 +28,7 @@ Header Example,
 Authorization: Bearer {jwt_token}
 ```
 
-Query Param,
+Query Param Example,
 ```text
 {{host}}/marketplace/orders?Authorization={jwt_token}
 ```
