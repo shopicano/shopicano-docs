@@ -602,6 +602,15 @@ Response `200`
 }
 ```
 
+Response `404`
+```json
+{
+    "code": "404014",
+    "title": "Order not found",
+    "errors": {}
+}
+```
+
 ## > Download Digital Product
 ```bash
 GET {{host}}/orders/{{order_id}}/products/{{product_id}}/download
