@@ -268,7 +268,7 @@ Body,
 Depends on payment gateway
 ```
 
-## Refund Payment
+## > Refund Payment
 ```text
 POST {{host}}/marketplace/orders/{{order_id}}/refund
 ```

@@ -5,7 +5,7 @@ weight: 4
 
 # Store API
 
-## Get Store
+## > Get Store
 ```text
 GET {{host}}/stores
 ```
@@ -52,7 +52,7 @@ Response `403`
 }
 ```
 
-## Update Store
+## > Update Store
 ```text
 PATCH {{host}}/stores
 ```
@@ -116,7 +116,7 @@ Response `403`
 }
 ```
 
-## List Store Stuffs
+## > List Store Stuffs
 ```text
 GET {{host}}/stores/{{store_id}}/staffs
 ```
@@ -165,7 +165,7 @@ Response `403`
 }
 ```
 
-## Add Store Stuff
+## > Add Store Stuff
 ```text
 POST {{host}}/stores/{{store_id}}/staffs
 ```
@@ -216,7 +216,7 @@ Response `404`
 }
 ```
 
-## Update Store Stuff
+## > Update Store Stuff
 ```text
 PATCH {{host}}/stores/{{store_id}}/staffs/{{user_id}}
 ```
@@ -258,7 +258,7 @@ Response `404`
 }
 ```
 
-## Remove Store Stuff
+## > Remove Store Stuff
 ```text
 DELETE {{host}}/stores/{{store_id}}/staffs/{{user_id}}
 ```
