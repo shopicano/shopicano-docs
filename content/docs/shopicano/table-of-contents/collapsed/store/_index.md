@@ -1,26 +1,172 @@
-# 3rd Level of Menu
+---
+title: '# Store'
+weight: 4
+---
 
-Nefas discordemque domino montes numen tum humili nexilibusque exit, Iove. Quae
-miror esse, scelerisque Melaneus viribus. Miseri laurus. Hoc est proposita me
-ante aliquid, aura inponere candidioribus quidque accendit bella, sumpta.
-Intravit quam erat figentem hunc, motus de fontes parvo tempestate.
+# Store API
 
-    iscsi_virus = pitch(json_in_on(eupViral),
-            northbridge_services_troubleshooting, personal(
-            firmware_rw.trash_rw_crm.device(interactive_gopher_personal,
-            software, -1), megabit, ergonomicsSoftware(cmyk_usb_panel,
-            mips_whitelist_duplex, cpa)));
-    if (5) {
-        managementNetwork += dma - boolean;
-        kilohertz_token = 2;
-        honeypot_affiliate_ergonomics = fiber;
-    }
-    mouseNorthbridge = byte(nybble_xmp_modem.horse_subnet(
-            analogThroughputService * graphicPoint, drop(daw_bit, dnsIntranet),
-            gateway_ospf), repository.domain_key.mouse(serverData(fileNetwork,
-            trim_duplex_file), cellTapeDirect, token_tooltip_mashup(
-            ripcordingMashup)));
-    module_it = honeypot_driver(client_cold_dvr(593902, ripping_frequency) +
-            coreLog.joystick(componentUdpLink), windows_expansion_touchscreen);
-    bashGigabit.external.reality(2, server_hardware_codec.flops.ebookSampling(
-            ciscNavigationBacklink, table + cleanDriver), indexProtocolIsp);
+## List Store Stuffs
+```text
+GET {{host}}/stores/{{store_id}}/staffs
+```
+
+Headers
+```bash
+Content-Type: application/json
+Authorization: Bearer {{store_user_token}}
+```
+
+Response `200`
+```json
+{
+    "data": [
+        {
+            "id": "1fdcfc30-14a9-4a72-a902-2fd025663e6d",
+            "name": "Stylify",
+            "address": "House : 4/2, Block : F, Lalmatia",
+            "city": "Dhaka",
+            "country": "Bangladesh",
+            "postcode": "",
+            "email": "stylify@shopicano.com",
+            "phone": "01710339933",
+            "status": "active",
+            "description": "Stylify is a platform where you will get all the latest life style products.",
+            "created_at": "2020-02-23T18:49:42.091795Z",
+            "updated_at": "2020-02-23T18:49:42.091796Z",
+            "user_id": "b6306c5c-8b95-4269-ba7a-c2e19da63dff",
+            "user_name": "Sakib Sami",
+            "user_email": "s4kibs4mi@gmail.com",
+            "user_profile_picture": "",
+            "user_phone": "",
+            "user_status": "active",
+            "user_permission": "user",
+            "store_permission": "admin"
+        }
+    ]
+}
+```
+
+Response `404`
+```json
+{
+    "code": "403014",
+    "title": "Unauthorized request"
+}
+```
+
+## Add Store Stuff
+```text
+POST {{host}}/stores/{{store_id}}/staffs
+```
+
+Headers
+```bash
+Content-Type: application/json
+Authorization: Bearer {{store_user_token}}
+```
+
+Body
+```json
+{
+    "email": "user@example.com",
+    "permission_id": "2"
+}
+```
+
+Response `200`
+```json
+{
+    "title": "Staff added to store"
+}
+```
+
+Response `403`
+```json
+{
+    "code": "403014",
+    "title": "Unauthorized request"
+}
+```
+
+Response `409`
+```json
+{
+    "code": "409015",
+    "title": "User already staff"
+}
+```
+
+Response `404`
+```json
+{
+    "code": "404003",
+    "title": "User not found",
+    "errors": {}
+}
+```
+
+## Update Store Stuff
+```text
+PATCH {{host}}/stores/{{store_id}}/staffs/{{user_id}}
+```
+
+Headers
+```bash
+Content-Type: application/json
+Authorization: Bearer {{store_user_token}}
+```
+
+Body
+```json
+{
+    "permission_id": "2"
+}
+```
+
+Response `200`
+```json
+{
+    "title": "Staff permission updated"
+}
+```
+
+Response `403`
+```json
+{
+    "code": "403014",
+    "title": "Unauthorized request"
+}
+```
+
+Response `404`
+```json
+{
+    "code": "404003",
+    "title": "User not found",
+    "errors": {}
+}
+```
+
+## Remove Store Stuff
+```text
+DELETE {{host}}/stores/{{store_id}}/staffs/{{user_id}}
+```
+
+Headers
+```bash
+Content-Type: application/json
+Authorization: Bearer {{store_user_token}}
+```
+
+Response `204`
+```json
+
+```
+
+Response `403`
+```json
+{
+    "code": "403014",
+    "title": "Unauthorized request"
+}
+```
