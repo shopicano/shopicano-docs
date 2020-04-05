@@ -56,7 +56,7 @@ version: '3.1'
 services:
   shopicano_backend:
     # change image
-    image: docker.pkg.github.com/shopicano/shopicano-backend/shopicano-backend:1.2.18-rc
+    image: shopicano/backend:1.2.20-rc
     command: ["serve"]
     restart: always
     ports:
@@ -75,7 +75,7 @@ services:
 
   shopicano_worker:
     # change image
-    image: docker.pkg.github.com/shopicano/shopicano-backend/shopicano-backend:1.2.18-rc
+    image: shopicano/backend:1.2.20-rc
     command: ["worker"]
     restart: always
     environment:
