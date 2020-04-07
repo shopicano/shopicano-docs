@@ -7,7 +7,7 @@ weight: 2
 
 ## > Search/List Locations
 ```bash
-GET {{host}}/marketplace/locations
+GET {{host}}/locations
 ```
 
 Query params
@@ -17,7 +17,7 @@ name [location name, location iso name]
 
 Headers
 ```bash
-Authorization: Bearer {{marketplace_user_token}}
+Authorization: Bearer {{user_token}}
 ```
 
 Response `200`
@@ -189,89 +189,15 @@ Response `200`
 }
 ```
 
-## > Update All Locations
-```bash
-PATCH {{host}}/marketplace/locations
-```
-
-Headers
-```bash
-Content-Type: application/json
-Authorization: Bearer {{marketplace_user_token}}
-```
-
-Body
-```json
-{
-    "is_published": true,
-    "shipping_method_id": "eb282e77-d571-42c1-bf11-47cca125dec4",
-    "payment_method_id": "9f96ea80-73bf-402f-95ca-4945d09a6c37"
-}
-```
-
-Response `200`
-```bash
-
-```
-
-## > Update Location By ID
-```bash
-PATCH {{host}}/marketplace/locations/{{location_id}}
-```
-
-Headers
-```bash
-Content-Type: application/json
-Authorization: Bearer {{marketplace_user_token}}
-```
-
-Body
-```json
-{
-    "is_published": true,
-    "shipping_method_id": "eb282e77-d571-42c1-bf11-47cca125dec4",
-    "payment_method_id": "9f96ea80-73bf-402f-95ca-4945d09a6c37"
-}
-```
-
-Response `200`
-```bash
-
-```
-
-## > Delete Location Params By ID
-```bash
-DELETE {{host}}/marketplace/locations/{{location_id}}
-```
-
-Headers
-```bash
-Content-Type: application/json
-Authorization: Bearer {{marketplace_user_token}}
-```
-
-Body
-```json
-{
-    "shipping_method_id": "eb282e77-d571-42c1-bf11-47cca125dec4",
-    "payment_method_id": "9f96ea80-73bf-402f-95ca-4945d09a6c37"
-}
-```
-
-Response `204`
-```bash
-
-```
-
 ## > Get Shipping Methods By Location
 ```bash
-GET {{host}}/marketplace/locations/{{location_id}}/shipping-methods
+GET {{host}}/locations/{{location_id}}/shipping-methods
 ```
 
 Headers
 ```bash
 Content-Type: application/json
-Authorization: Bearer {{marketplace_user_token}}
+Authorization: Bearer {{user_token}}
 ```
 
 Response `200`
@@ -295,13 +221,13 @@ Response `200`
 
 ## > Get Payment Methods By Location
 ```bash
-GET {{host}}/marketplace/locations/{{location_id}}/payment-methods
+GET {{host}}/locations/{{location_id}}/payment-methods
 ```
 
 Headers
 ```bash
 Content-Type: application/json
-Authorization: Bearer {{marketplace_user_token}}
+Authorization: Bearer {{user_token}}
 ```
 
 Response `200`
