@@ -19,9 +19,9 @@ Authorization: Bearer {{user_token}}
 Body
 ```json
 {
-    "name": "BoiChai Ltd",
+    "name": "Shopicano",
     "address_id": "cd4d777f-90ec-407b-833a-adca883e3395",
-    "description": "BoiChai book store",
+    "description": "Shopicano store",
     "logo_image": "/images/logo.png",
     "cover_image": "/images/cover.png"
 }
@@ -29,7 +29,55 @@ Body
 
 Response `201`
 ```json
+{
+    "data": {
+        "id": "90404aa5-b22c-43c0-b65c-81b0c5620987",
+        "name": "Shopicano",
+        "status": "active",
+        "logo_image": "/images/logo.png",
+        "cover_image": "/images/cover.png",
+        "commission_rate": 0,
+        "is_product_creation_enabled": false,
+        "is_order_creation_enabled": false,
+        "is_auto_confirm_enabled": false,
+        "description": "Shopicano store",
+        "address": "Block : F",
+        "city": "Dhaka",
+        "country": "Bahrain",
+        "postcode": "1207",
+        "email": "root@sakib.ninja",
+        "phone": "01710339938",
+        "created_at": "2020-04-08T19:02:46.665824Z",
+        "updated_at": "2020-04-08T19:02:46.665825Z"
+    }
+}
+```
 
+Response `409`
+```json
+{
+    "code": "409001",
+    "title": "Key (name)=(BoiChai Ltd) already exists.",
+    "errors": {
+        "Severity": "ERROR",
+        "Code": "23505",
+        "Message": "duplicate key value violates unique constraint \"stores_name_key\"",
+        "Detail": "Key (name)=(BoiChai Ltd) already exists.",
+        "Hint": "",
+        "Position": "",
+        "InternalPosition": "",
+        "InternalQuery": "",
+        "Where": "",
+        "Schema": "public",
+        "Table": "stores",
+        "Column": "",
+        "DataTypeName": "",
+        "Constraint": "stores_name_key",
+        "File": "nbtinsert.c",
+        "Line": "434",
+        "Routine": "_bt_check_unique"
+    }
+}
 ```
 
 ## > Get Store
@@ -47,26 +95,39 @@ Response `200`
 ```json
 {
     "data": {
-        "id": "1fdcfc30-14a9-4a72-a902-2fd025663e6d",
-        "name": "Stylify",
-        "address": "House : 4/2, Block : F, Lalmatia",
-        "city": "Dhaka",
-        "country": "Bangladesh",
-        "postcode": "",
-        "email": "stylify@shopicano.com",
-        "phone": "01710339933",
-        "status": "active",
-        "description": "Stylify is a platform where you will get all the latest life style products.",
-        "created_at": "2020-02-23T18:49:42.091795Z",
-        "updated_at": "2020-02-23T18:49:42.091796Z",
-        "user_id": "b6306c5c-8b95-4269-ba7a-c2e19da63dff",
-        "user_name": "Sakib Sami",
-        "user_email": "s4kibs4mi@gmail.com",
-        "user_profile_picture": "",
-        "user_phone": "",
-        "user_status": "active",
-        "user_permission": "user",
-        "store_permission": "admin"
+        "staff": {
+            "store_id": "90404aa5-b22c-43c0-b65c-81b0c5620987",
+            "staff_id": "27ce7498-ac36-47e7-879a-442f3366c2b5",
+            "staff_name": "Nur",
+            "staff_email": "root@sakib.ninja",
+            "staff_phone": "",
+            "staff_picture": "",
+            "staff_permission": "admin",
+            "staff_status": "active",
+            "is_creator": true,
+            "store_status": "active",
+            "store_name": "Shopicano"
+        },
+        "store": {
+            "id": "90404aa5-b22c-43c0-b65c-81b0c5620987",
+            "name": "Shopicano",
+            "status": "active",
+            "logo_image": "/images/logo.png",
+            "cover_image": "/images/cover.png",
+            "commission_rate": 0,
+            "is_product_creation_enabled": false,
+            "is_order_creation_enabled": false,
+            "is_auto_confirm_enabled": false,
+            "description": "Shopicano store",
+            "address": "Block : F",
+            "city": "Dhaka",
+            "country": "Bahrain",
+            "postcode": "1207",
+            "email": "root@sakib.ninja",
+            "phone": "01710339938",
+            "created_at": "2020-04-08T19:02:46.665824Z",
+            "updated_at": "2020-04-08T19:02:46.665825Z"
+        }
     }
 }
 ```
@@ -159,26 +220,17 @@ Response `200`
 {
     "data": [
         {
-            "id": "1fdcfc30-14a9-4a72-a902-2fd025663e6d",
-            "name": "Stylify",
-            "address": "House : 4/2, Block : F, Lalmatia",
-            "city": "Dhaka",
-            "country": "Bangladesh",
-            "postcode": "",
-            "email": "stylify@shopicano.com",
-            "phone": "01710339933",
-            "status": "active",
-            "description": "Stylify is a platform where you will get all the latest life style products.",
-            "created_at": "2020-02-23T18:49:42.091795Z",
-            "updated_at": "2020-02-23T18:49:42.091796Z",
-            "user_id": "b6306c5c-8b95-4269-ba7a-c2e19da63dff",
-            "user_name": "Sakib Sami",
-            "user_email": "s4kibs4mi@gmail.com",
-            "user_profile_picture": "",
-            "user_phone": "",
-            "user_status": "active",
-            "user_permission": "user",
-            "store_permission": "admin"
+            "store_id": "90404aa5-b22c-43c0-b65c-81b0c5620987",
+            "staff_id": "27ce7498-ac36-47e7-879a-442f3366c2b5",
+            "staff_name": "Nur",
+            "staff_email": "root@sakib.ninja",
+            "staff_phone": "",
+            "staff_picture": "",
+            "staff_permission": "admin",
+            "staff_status": "active",
+            "is_creator": true,
+            "store_status": "active",
+            "store_name": "Shopicano"
         }
     ]
 }
