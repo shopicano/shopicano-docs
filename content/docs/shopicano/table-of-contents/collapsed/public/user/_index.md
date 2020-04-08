@@ -1,6 +1,6 @@
 ---
 title: '# User'
-weight: 3
+weight: 2
 ---
 
 # User API

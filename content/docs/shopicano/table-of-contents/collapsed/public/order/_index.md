@@ -1,6 +1,6 @@
 ---
 title: '# Order'
-weight: 4
+weight: 6
 ---
 
 # Order API

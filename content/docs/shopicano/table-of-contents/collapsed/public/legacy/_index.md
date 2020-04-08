@@ -1,6 +1,6 @@
 ---
 title: '# Legacy'
-weight: 2
+weight: 1
 ---
 
 # Legacy API

@@ -1,6 +1,6 @@
 ---
 title: '# Location'
-weight: 2
+weight: 3
 ---
 
 # Location API

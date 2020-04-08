@@ -1,6 +1,6 @@
 ---
 title: '# Shipping Method'
-weight: 4
+weight: 5
 ---
 
 # Shipping Method API

@@ -1,6 +1,6 @@
 ---
 title: '# Payment Method'
-weight: 3
+weight: 4
 ---
 
 # Payment Method API
@@ -25,7 +25,7 @@ Response `200`
         "processing_fee": 0,
         "min_processing_fee": 0,
         "max_processing_fee": 0,
-        "is_published": false,
+        "is_published": true,
         "is_offline_payment": true,
         "is_flat": false,
         "created_at": "2020-03-11T06:36:46.608587Z",
