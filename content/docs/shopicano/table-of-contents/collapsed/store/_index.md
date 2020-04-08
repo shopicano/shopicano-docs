@@ -5,6 +5,33 @@ weight: 2
 
 # Store API
 
+## > Create Store
+```text
+POST {{host}}/stores
+```
+
+Headers
+```bash
+Content-Type: application/json
+Authorization: Bearer {{user_token}}
+```
+
+Body
+```json
+{
+    "name": "BoiChai Ltd",
+    "address_id": "cd4d777f-90ec-407b-833a-adca883e3395",
+    "description": "BoiChai book store",
+    "logo_image": "/images/logo.png",
+    "cover_image": "/images/cover.png"
+}
+```
+
+Response `201`
+```json
+
+```
+
 ## > Get Store
 ```text
 GET {{host}}/stores
