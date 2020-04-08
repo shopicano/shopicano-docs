@@ -1,6 +1,6 @@
 ---
 title: '# Coupon'
-weight: 2
+weight: 6
 ---
 
 # Coupon API
