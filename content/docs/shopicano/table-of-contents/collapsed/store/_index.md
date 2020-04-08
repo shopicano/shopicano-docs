@@ -1,6 +1,6 @@
 ---
 title: '# Store'
-weight: 4
+weight: 2
 ---
 
 # Store API
