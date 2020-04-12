@@ -100,15 +100,22 @@ Response `200`
 {
     "data": [
         {
-            "id": "4c3b8713-2b02-4960-a4ce-fcd11784398a",
-            "name": "Running Bike",
-            "store_id": "1fdcfc30-14a9-4a72-a902-2fd025663e6d",
-            "description": "All type of running shoes belongs to it",
-            "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc",
-            "count": 0,
+            "id": "e2960bc6-44a9-40e3-a35f-e08b8d97138a",
+            "name": "Hello",
+            "description": "Hello",
+            "image": "collections/6ff1ea26-a46e-48eb-92e3-8b59207d59bc-bG9nbw==.png",
+            "is_published": false,
+            "number_of_products": 1,
+            "created_at": "2020-04-12T13:22:45.097024Z"
+        },
+        {
+            "id": "d738f619-dc57-40da-9ec0-4f35f0d475a8",
+            "name": "Summer",
+            "description": "All products",
+            "image": "",
             "is_published": true,
-            "created_at": "2020-03-11T07:28:34.111009Z",
-            "updated_at": "2020-03-11T07:28:34.111009Z"
+            "number_of_products": 0,
+            "created_at": "2020-03-30T06:48:21.575177Z"
         }
     ]
 }
