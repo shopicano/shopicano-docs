@@ -205,3 +205,25 @@ Response `204`
 ```json
 
 ```
+
+## > List Products
+```bash
+GET {{host}}/marketplace/collections/{{collection_id}}/products
+```
+
+Query params
+```text
+limit [Maximum number of elements]
+page  [Number of page]
+```
+
+Headers
+```bash
+Content-Type: application/json
+Authorization: Bearer {{store_user_token}}
+```
+
+Response `200`
+```json
+
+```

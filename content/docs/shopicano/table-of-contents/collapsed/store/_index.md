@@ -155,12 +155,7 @@ Body
 ```json
 {
     "name": "Store Name",
-    "address": "Store Address",
-    "city": "Store City",
-    "country": "Store Country",
-    "postcode": "Store Postcode",
-    "email": "Store Email",
-    "phone": "Store Phone",
+    "address_id": "Store Address ID",
     "description": "Store Description",
     "logo_image": "store_logo_image.png",
     "cover_image": "store_cover_image.png",
