@@ -33,7 +33,6 @@ Response `200`
             "store_id": "1fdcfc30-14a9-4a72-a902-2fd025663e6d",
             "description": "All type of running shoes belongs to it",
             "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc",
-            "count": 0,
             "is_published": true,
             "created_at": "2020-03-11T07:28:34.111009Z",
             "updated_at": "2020-03-11T07:28:34.111009Z"
