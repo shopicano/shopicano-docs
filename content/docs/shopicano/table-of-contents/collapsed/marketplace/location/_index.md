@@ -204,8 +204,8 @@ Body
 ```json
 {
     "is_published": true,
-    "shipping_method_id": "eb282e77-d571-42c1-bf11-47cca125dec4",
-    "payment_method_id": "9f96ea80-73bf-402f-95ca-4945d09a6c37"
+    "shipping_methods": ["eb282e77-d571-42c1-bf11-47cca125dec4"],
+    "payment_methods": ["9f96ea80-73bf-402f-95ca-4945d09a6c37"]
 }
 ```
 
@@ -229,8 +229,8 @@ Body
 ```json
 {
     "is_published": true,
-    "shipping_method_id": "eb282e77-d571-42c1-bf11-47cca125dec4",
-    "payment_method_id": "9f96ea80-73bf-402f-95ca-4945d09a6c37"
+    "shipping_methods": ["eb282e77-d571-42c1-bf11-47cca125dec4"],
+    "payment_methods": ["9f96ea80-73bf-402f-95ca-4945d09a6c37"]
 }
 ```
 
@@ -253,8 +253,8 @@ Authorization: Bearer {{marketplace_user_token}}
 Body
 ```json
 {
-    "shipping_method_id": "eb282e77-d571-42c1-bf11-47cca125dec4",
-    "payment_method_id": "9f96ea80-73bf-402f-95ca-4945d09a6c37"
+    "shipping_methods": ["eb282e77-d571-42c1-bf11-47cca125dec4"],
+    "payment_methods": ["9f96ea80-73bf-402f-95ca-4945d09a6c37"]
 }
 ```
 
