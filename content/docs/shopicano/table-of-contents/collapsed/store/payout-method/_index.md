@@ -1,13 +1,13 @@
 ---
-title: '# Business Account Type'
+title: '# Payout Method'
 weight: 5
 ---
 
-# Business Account Type API
+# Payout Method API
 
 ## > List
 ```bash
-GET {{host}}/business-account-types
+GET {{host}}/payout-methods
 ```
 
 Query params
@@ -28,31 +28,19 @@ Response `200`
     "data": [
         {
             "id": "dcd58b4c-3f1c-4cd2-9a60-648f1bbf20e2",
-            "name": "Partnership / LLP",
+            "name": "Bkash",
+            "inputs": "Number",
             "is_published": true,
             "created_at": "2020-05-15T22:12:36.692217Z",
             "updated_at": "2020-05-15T22:12:36.692217Z"
         },
         {
             "id": "2cfb44c7-a79b-46ba-a73c-315c9b59bf86",
-            "name": "Non-profit",
+            "name": "Bank",
+            "inputs": "Account Name, Account No",
             "is_published": true,
             "created_at": "2020-05-15T22:12:26.912179Z",
             "updated_at": "2020-05-15T22:12:26.912179Z"
-        },
-        {
-            "id": "fd2bbbdf-d65a-4c02-8a56-a68e46d4b3c3",
-            "name": "Corporation",
-            "is_published": false,
-            "created_at": "2020-05-15T22:12:15.605906Z",
-            "updated_at": "2020-05-15T22:12:15.605906Z"
-        },
-        {
-            "id": "e09ca038-7969-4fb0-9856-c4ea45a0a00b",
-            "name": "Individual / Sole Proprietorship",
-            "is_published": true,
-            "created_at": "2020-05-15T22:11:58.615418Z",
-            "updated_at": "2020-05-15T22:11:58.615419Z"
         }
     ]
 }
@@ -60,7 +48,7 @@ Response `200`
 
 ## > Get
 ```bash
-GET {{host}}/business-account-type/{{business_account_type_id}}
+GET {{host}}/payout-method/{{payout_method_id}}
 ```
 
 Headers
@@ -74,7 +62,8 @@ Response `200`
 {
     "data": {
         "id": "2cfb44c7-a79b-46ba-a73c-315c9b59bf86",
-        "name": "Non-profit",
+        "name": "Bank",
+        "inputs": "Account Name, Account No",
         "is_published": true,
         "created_at": "2020-05-15T22:12:26.912179Z",
         "updated_at": "2020-05-15T22:12:26.912179Z"
