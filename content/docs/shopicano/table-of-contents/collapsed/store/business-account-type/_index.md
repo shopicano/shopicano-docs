@@ -7,7 +7,7 @@ weight: 5
 
 ## > List
 ```bash
-GET {{host}}/marketplace/business-account-types
+GET {{host}}/business-account-types
 ```
 
 Query params
@@ -60,7 +60,7 @@ Response `200`
 
 ## > Get
 ```bash
-GET {{host}}/marketplace/business-account-type/{{business_account_type_id}}
+GET {{host}}/business-account-type/{{business_account_type_id}}
 ```
 
 Headers
