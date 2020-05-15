@@ -48,7 +48,7 @@ Response `200`
 
 ## > Get
 ```bash
-GET {{host}}/payout-method/{{payout_method_id}}
+GET {{host}}/payout-methods/{{payout_method_id}}
 ```
 
 Headers
