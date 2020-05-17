@@ -70,3 +70,28 @@ Response `200`
     }
 }
 ```
+
+## > Get
+```bash
+GET {{host}}/payout-methods/{{payout_method_id}}
+```
+
+Headers
+```bash
+Content-Type: application/json
+Authorization: Bearer {{store_user_token}}
+```
+
+Response `200`
+```json
+{
+    "data": {
+        "id": "2cfb44c7-a79b-46ba-a73c-315c9b59bf86",
+        "name": "Bank",
+        "inputs": "Account Name, Account No",
+        "is_published": true,
+        "created_at": "2020-05-15T22:12:26.912179Z",
+        "updated_at": "2020-05-15T22:12:26.912179Z"
+    }
+}
+```
