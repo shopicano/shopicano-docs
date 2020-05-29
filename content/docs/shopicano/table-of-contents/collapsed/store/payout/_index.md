@@ -5,91 +5,9 @@ weight: 6
 
 # Payout API
 
-## > Create Payout Entry
-```bash
-POST {{host}}/marketplace/stores/{{store_id}}/payouts/entries
-```
-
-Headers
-```bash
-Content-Type: application/json
-Authorization: Bearer {{store_user_token}}
-```
-
-Body
-```json
-{
-    "amount": 800,
-    "note": "test entry"
-}
-```
-
-Response `201`
-```json
-{
-    "data": {
-        "id": "cc561d0a-61cd-4197-8bc4-5387cff8518e",
-        "store_id": "90404aa5-b22c-43c0-b65c-81b0c5620987",
-        "initiated_by_user_id": "27ce7498-ac36-47e7-879a-442f3366c2b5",
-        "is_marketplace_initiated": false,
-        "status": "payout_pending",
-        "amount": 800,
-        "failure_reason": "",
-        "note": "test entry",
-        "highlights": "",
-        "payout_method_id": "41bea377-ab61-423d-bf55-1c82c08ac987",
-        "payout_method_details": "01710339938",
-        "created_at": "2020-05-29T05:22:23.115084Z",
-        "updated_at": "2020-05-29T05:22:23.115084Z"
-    }
-}
-```
-
-## > Update Payout Entry
-```bash
-PATCH {{host}}/marketplace/stores/{{store_id}}/payouts/entries/{{entry_id}}
-```
-
-Headers
-```bash
-Content-Type: application/json
-Authorization: Bearer {{store_user_token}}
-```
-
-Body
-```json
-{
-    "amount": 700,
-    "status": "payout_processing",
-    "highlights": "test",
-    "failure_reason": ""
-}
-```
-
-Response `201`
-```json
-{
-    "data": {
-        "id": "cc561d0a-61cd-4197-8bc4-5387cff8518e",
-        "store_id": "90404aa5-b22c-43c0-b65c-81b0c5620987",
-        "initiated_by_user_id": "27ce7498-ac36-47e7-879a-442f3366c2b5",
-        "is_marketplace_initiated": false,
-        "status": "payout_processing",
-        "amount": 800,
-        "failure_reason": "",
-        "note": "test entry",
-        "highlights": "test",
-        "payout_method_id": "41bea377-ab61-423d-bf55-1c82c08ac987",
-        "payout_method_details": "01710339938",
-        "created_at": "2020-05-29T05:22:23.115084Z",
-        "updated_at": "2020-05-29T05:22:23.115084Z"
-    }
-}
-```
-
 ## > Summary
 ```bash
-GET {{host}}/marketplace/stores/{{store_id}}/payouts/summary
+GET {{host}}/stores/{{store_id}}/payouts/summary
 ```
 
 Headers
@@ -113,7 +31,7 @@ Response `200`
 
 ## > List Payout Entries
 ```bash
-GET {{host}}/marketplace/stores/{{store_id}}/payouts/entries
+GET {{host}}/stores/{{store_id}}/payouts/entries
 ```
 
 Headers
@@ -196,9 +114,49 @@ Response `200`
 }
 ```
 
+## > Create Payout Entry
+```bash
+POST {{host}}/stores/{{store_id}}/payouts/entries
+```
+
+Headers
+```bash
+Content-Type: application/json
+Authorization: Bearer {{store_user_token}}
+```
+
+Body
+```json
+{
+    "amount": 800,
+    "note": "test entry"
+}
+```
+
+Response `201`
+```json
+{
+    "data": {
+        "id": "cc561d0a-61cd-4197-8bc4-5387cff8518e",
+        "store_id": "90404aa5-b22c-43c0-b65c-81b0c5620987",
+        "initiated_by_user_id": "27ce7498-ac36-47e7-879a-442f3366c2b5",
+        "is_marketplace_initiated": false,
+        "status": "payout_pending",
+        "amount": 800,
+        "failure_reason": "",
+        "note": "test entry",
+        "highlights": "",
+        "payout_method_id": "41bea377-ab61-423d-bf55-1c82c08ac987",
+        "payout_method_details": "01710339938",
+        "created_at": "2020-05-29T05:22:23.115084Z",
+        "updated_at": "2020-05-29T05:22:23.115084Z"
+    }
+}
+```
+
 ## > Get Payout Entry
 ```bash
-GET {{host}}/marketplace/stores/{{store_id}}/payouts/entries/{{entry_id}}
+GET {{host}}/stores/{{store_id}}/payouts/entries/{{entry_id}}
 ```
 
 Headers
